@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>The Review Center</title>
+  <link href="assets/index.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+  
+</head>
+<body id="body">
+  <div class="container text-center" style="margin: 0 auto;">
+  <h1 style="margin-top: 2%;margin-bottom: -4%;">The Review Center</h1>
+  </div>
+  <h2 class="about" style="float: left">
+    <button onmouseenter="abt_entered()" onmouseleave="abt_left()" class="navigation_about_text" style="background:none; border:none; color:#fca311; display: inline">
+        About
+    </button>
+    </h2>
+    <div id="abt_overlay" style="display: none; background: #e5e5e5;">This website is a platform for users to post reviews<br> about all sorts of products. There are no resistriction<br> the type of products posted, barring illegal items.</div>
+
+    <h2 class="help" style="float: right;">
+    <button onmouseenter="help_entered()" onmouseleave="help_left()" class="navigation_help_text" style="background:none; border:none; color:#fca311; display: inline;">
+        Help
+    </button>
+    </h2>
+    <div id="help_overlay" style="display: none; background: #e5e5e5;opacity: 0.5;">To get started, simply scroll to view posted reviews,<br> press "create a review" to post your review and <br>press the thumbs up for the reviews you like!</div>
+
+    
+
+  
+<div class="hr_split">
+    <hr class="text-white" style="width: 87%; margin: 0 auto;">
+</div>
+
+
+  
+<div class="container text-center">
+    <h3 class="create_review" style="font-size: 150%;">
+    <button onclick="showForm()"  id="load_review_form" class="navigation_review_creation_text" style="background:none; border:#14213D; color:#e5e5e5; margin-bottom: 1%; margin-top: 1%;"> <!--deal with this later - stylistic issue-->
+        Create a review
+    </button>
+    </h3>
+</div>
+
+
+<div id="form_div" class="container text-center" style="display: none; margin-bottom: 2%;">
+  <form id="reviewForm">
+
+    <h3 style="margin-bottom: 3%; margin-top: 1%;">Post a review</h3>
+
+    <div class="form_field">
+      <label>Item to review:</label>
+      <input type="text" id="key" name="key" title="key" placeholder="Item name" maxlength="30" style="width:70%;">
+      <small></small>
+    </div>
+
+  
+    <div class="form_field">
+      <label style="display: block; margin-bottom: 1%;">Review of item:</label>
+      <textarea class="text_desc" id="desc_rev" name="desc_rev" placeholder="Write your review here" rows="3" cols="25"></textarea>
+      <small></small>
+    </div>
+
+    <div class="form_field">
+      <label>Out of 10:</label>
+      <input type="number" min="1" max="10" step="1" id="score" name="score" style="width:30%;" oninput="(validity.valid)||(value='');">
+      <small></small>
+    </div>
+
+    <div class="form_field" style="padding: 10px;">
+      <input type="submit" style="border: none; border-radius: 15px 15px 15px 15px;" onclick="fade(form_div)">
+      <small></small>
+    </div>
+  </form>
+</div>
+
+<div id="form_comment_div" class="container text-center" style="display: none;">
+  <form id="form_comment">
+    <h3 style="margin-bottom: 3%; margin-top: 1%;">Post a comment</h3>
+
+    <div class="form_field">
+      <label>Comment:</label>
+      <input type="text" id="comment" name="comment" title="comment" placeholder="Item name" style="width:70%;">
+      <small></small>
+    </div>
+
+  </form>
+</div>
+
+<div class="container text-center" id = "list_of_posts" style="color:#e5e5e5"></div>
+<div class="container text-center" id = "list_post_attributes" style="color: #e5e5e5;"></div>
+
+<script src="clientToServer.js"></script>
+<script src="buttons.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+body{ background: #14213D !important; filter: brightness(100%) !important;} /* Adding !important forces the browser to overwrite the default style applied by Bootstrap */
+h1{
+  margin: 0 auto;
+  text-align: center;
+  color: #fca311;
+}
+h2{
+  text-align: center;
+  color: #fca311;
+  margin: 3%;
+
+}
+hr{
+  height: 3px;
+}
+#abt_overlay{
+  background-color: #e5e5e5;
+  position: absolute;
+  z-index:100;
+  left: 6.3%;
+  text-align:left;
+  border-radius: 2px 15px 15px 15px;
+  margin-top: 4%;
+  padding: 10px;
+}
+#help_overlay{
+  background-color: #e5e5e5;
+  position: absolute;
+  z-index:100;
+  right: 6.3%;
+  text-align:left;
+  border-radius: 15px 2px 15px 15px;
+  margin-top: 4%;
+  padding: 10px;
+}
+#form_div,#comment_form_div{
+  background-color: #e5e5e5;
+  opacity: 0.6;
+  position:relative;
+  z-index: 80;
+  margin: 0 auto;
+  width: 80%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 15px 15px 15px 15px;
+}
+#list_of_posts{
+  background-color: #28016b;
+  border-radius: 9px 9px 9px 9px;
+  border:3px solid #fca311;
+  width: 70%;
+  position: relative;
+  z-index: -1;
+}
+label{
+  margin-bottom: 2%;
+}
+.text_desc{
+resize: none;
+height: 40%;
+width: 50%;
+margin-bottom: 2%;
+}
