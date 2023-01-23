@@ -54,20 +54,20 @@
 
     <div class="form_field">
       <label>Item to review:</label>
-      <input type="text" id="key" name="key" title="key" placeholder="Item name" maxlength="30" style="width:70%;">
+      <input type="text" id="key" name="key" title="key" placeholder="Item name" maxlength="30" style="width:70%;" required>
       <small></small>
     </div>
 
   
     <div class="form_field">
       <label style="display: block; margin-bottom: 1%;">Review of item:</label>
-      <textarea class="text_desc" id="desc_rev" name="desc_rev" placeholder="Write your review here" rows="3" cols="25"></textarea>
+      <textarea class="text_desc" id="desc_rev" name="desc_rev" placeholder="Write your review here" rows="3" cols="25" required></textarea>
       <small></small>
     </div>
 
     <div class="form_field">
       <label>Out of 10:</label>
-      <input type="number" min="1" max="10" step="1" id="score" name="score" style="width:30%;" oninput="(validity.valid)||(value='');">
+      <input type="number" min="1" max="10" step="1" id="score" name="score" style="width:30%;" oninput="(validity.valid)||(value='');" required>
       <small></small>
     </div>
 
@@ -84,7 +84,7 @@
 
     <div class="form_field">
       <label>Comment:</label>
-      <input type="text" id="comment" name="comment" title="comment" placeholder="Item name" style="width:70%;">
+      <input type="text" id="comment" name="comment" title="comment" placeholder="Item name" style="width:70%;" required>
       <small></small>
     </div>
 

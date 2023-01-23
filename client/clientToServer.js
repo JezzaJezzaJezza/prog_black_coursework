@@ -1,5 +1,6 @@
 const endpoint_root = "http://127.0.0.1:5510/";
 
+
 let the_list = "";
  async function list_posts(){
   
@@ -39,7 +40,7 @@ let the_list = "";
     <form id="comment_form${post_key1}">
     <div class="form_field">
     <label>Comment:</label>
-    <input type="text" id="comment" name="comment" placeholder="Criticize their opinion..." style="width:70%;"/>
+    <input type="text" id="comment" name="comment" placeholder="Criticize their opinion..." style="width:70%;" required/>
     <input type="hidden" id="key" name="key" value="${post_key1}">
     <small></small>
     </div>
@@ -71,8 +72,8 @@ let the_list = "";
     });
     the_right_form.reset();
     list_posts();
-  });
- };
+  })
+};
 
 
 async function get_comments(link_post_key){
@@ -111,7 +112,7 @@ async function get_comments(link_post_key){
  };
  
 
- document.addEventListener("DOMContentLoaded", comment_getter);
+ //document.addEventListener("DOMContentLoaded", comment_getter);
  document.addEventListener("DOMContentLoaded", get_comments);
  document.addEventListener("DOMContentLoaded", list_posts);
  document.addEventListener("DOMContentLoaded", get_form);
