@@ -4,4 +4,5 @@ const port = 5510
 
 app.listen(port, hostname, () => {
 	console.log("server is working")
+	console.log(`http://${hostname}:${port}/`)
 })
